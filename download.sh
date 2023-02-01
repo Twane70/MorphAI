@@ -2,6 +2,9 @@
 fb_status=$(wget --spider -S https://filebox.ece.vt.edu/ 2>&1 | grep  "HTTP/1.1 200 OK")
 
 mkdir checkpoints
+mkdir image
+mkdir video
+mkdir depth
 
 echo "downloading from filebox ..."
 wget https://filebox.ece.vt.edu/~jbhuang/project/3DPhoto/model/color-model.pth
