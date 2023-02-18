@@ -129,7 +129,7 @@ for idx in tqdm(range(len(sample_list))):
     else:
         verts, colors, faces, Height, Width, hFov, vFov = rt_info
 
-
+    clear_output()
     print(f"Making video at {time.time()}")
     videos_poses, video_basename = copy.deepcopy(sample['tgts_poses']), sample['tgt_name']
     top = (config.get('original_h') // 2 - sample['int_mtx'][1, 2] * config['output_h'])
