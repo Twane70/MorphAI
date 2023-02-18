@@ -102,9 +102,10 @@ for idx in tqdm(range(len(sample_list))):
         rgb_model.eval()
         rgb_model = rgb_model.to(device)
         graph = None
+        
+        clear_output()
 
-
-        print(f"Writing depth ply (and basically doing everything) at {time.time()}")
+        print(f"Détection des volumes et estimation de la profondeur par l'IA... \n Temps estimé : 4min")
         rt_info = write_ply(image,
                               depth,
                               sample['int_mtx'],
@@ -139,3 +140,6 @@ for idx in tqdm(range(len(sample_list))):
                         image.copy(), copy.deepcopy(sample['int_mtx']), config, image,
                         videos_poses, video_basename, config.get('original_h'), config.get('original_w'), border=border, depth=depth, normal_canvas=normal_canvas, all_canvas=all_canvas,
                         mean_loc_depth=mean_loc_depth)
+    clear_output()
+
+print("Rendu terminé !)
