@@ -142,4 +142,4 @@ for idx in tqdm(range(len(sample_list))):
                         mean_loc_depth=mean_loc_depth)
     clear_output()
 
-print("Rendu terminé !)
+print("Rendu terminé !")
